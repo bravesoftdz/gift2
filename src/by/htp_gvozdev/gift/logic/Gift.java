@@ -47,6 +47,7 @@ public class Gift {
 	public static void getShowRange(ArrayList<Production> list) {
 		System.out.println();
 		System.out.println("                        HEW YEAR'S GIFT                         ");
+		System.out.println();
 		System.out.println("----------------------------------------------------------------");
 		System.out.printf("%5s %15s %15s %8s %8s %8s \t \n", " No" + "|", "NAME" + "|", "TYPE" + "|", "COST" + "|",
 				"WEIGHT" + "|", "CONTENT" + "|");
@@ -101,7 +102,7 @@ public class Gift {
 
 	}
 
-	private static int getTotalWeight(ArrayList<Production> list) {
+	public static int getTotalWeight(ArrayList<Production> list) {
 		int heft = 0;
 		for (Production value : list) {
 			heft += value.getWeight();

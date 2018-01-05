@@ -22,7 +22,8 @@ public class Menu {
 		System.out.println("|        2. Delete item form list.            |");
 		System.out.println("|        3. Sort list                         |");
 		System.out.println("|        4. Find range in content sugar       |");
-		System.out.println("|        5. Exit                              |");
+		System.out.println("|        5. Print to file                     |");
+		System.out.println("|        6. Exit                              |");
 		System.out.println("===============================================");
 
 		int menuItem = scanner.nextInt();
@@ -38,6 +39,8 @@ public class Menu {
 		} else if (menuItem == 4) {
 			FindRange.getFind();
 		} else if (menuItem == 5) {
+			PrintToFile.printFile();
+		} else if (menuItem == 6) {
 			ClearConsole.ClearCons();
 			System.out.println("The program is closed.");
 			System.exit(0);
