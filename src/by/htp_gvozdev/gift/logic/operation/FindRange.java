@@ -2,9 +2,7 @@ package by.htp_gvozdev.gift.logic.operation;
 
 import java.util.Scanner;
 
-import by.htp_gvozdev.gift.logic.Constant;
-import by.htp_gvozdev.gift.logic.Gift;
-import by.htp_gvozdev.gift.runner.MainApp;
+import by.htp_gvozdev.gift.logic.*;
 
 public class FindRange {
 
@@ -25,7 +23,7 @@ public class FindRange {
 		Constant.CONST_BY_SUGAR_1 = v1;
 		Constant.CONST_BY_SUGAR_2 = v2;
 
-		Gift.getShowRange(MainApp.list);
+		Gift.getShowRange(Initialization.list);
 		Gift.getGiftTotalOnChange();
 	}
 

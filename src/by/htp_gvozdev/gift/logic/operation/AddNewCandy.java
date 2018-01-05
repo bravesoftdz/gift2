@@ -4,9 +4,7 @@ package by.htp_gvozdev.gift.logic.operation;
 import java.util.Scanner;
 
 import by.htp_gvozdev.gift.bean.Marshmallow;
-import by.htp_gvozdev.gift.logic.Gift;
-import by.htp_gvozdev.gift.runner.MainApp;
-
+import by.htp_gvozdev.gift.logic.*;
 public class AddNewCandy {
 	@SuppressWarnings("resource")
 	public static void addCandy() {
@@ -28,7 +26,7 @@ public class AddNewCandy {
 		System.out.println("Enter the content sugar in candy.");
 		double contCandyUser = sc.nextDouble();
 
-		MainApp.list.add(new Marshmallow(nameCandyUser, typeCandyUser, priceCandyUser, weightCandyUser, contCandyUser));
+		Initialization.list.add(new Marshmallow(nameCandyUser, typeCandyUser, priceCandyUser, weightCandyUser, contCandyUser));
 		
 		ClearConsole.ClearCons();
 
@@ -41,7 +39,7 @@ public class AddNewCandy {
 				priceCandyUser + "|", weightCandyUser + "|", contCandyUser + "|");
 		System.out.println("----------------------------------------------------------------");
 
-		Gift.showGift(MainApp.list);
+		Gift.showGift(Initialization.list);
 		Gift.getGiftTotalOnChange();
 
 		Menu.viewMenu();

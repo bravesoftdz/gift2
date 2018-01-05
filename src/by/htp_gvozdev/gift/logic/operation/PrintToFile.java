@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 
 import by.htp_gvozdev.gift.bean.Production;
 import by.htp_gvozdev.gift.logic.Gift;
-import by.htp_gvozdev.gift.runner.MainApp;
+import by.htp_gvozdev.gift.logic.Initialization;
 
 public class PrintToFile {
 
@@ -26,15 +26,15 @@ public class PrintToFile {
 			printWriter.printf("%5s %15s %15s %8s %8s %8s \t \n", "| No" + "|", "NAME" + "|", "TYPE" + "|", "COST" + "|",	"WEIGHT" + "|", "CONTENT" + "|");
 			printWriter.println("----------------------------------------------------------------");
 			int i = 1;
-			for (Production value : MainApp.list) {
+			for (Production value : Initialization.list) {
 				printWriter.printf("%4s %15s %15s %8s %8s %8s \t \n", "| " +  i + " |", value.getName() + "|", value.getType() + "|",	value.getCost() + "|", value.getWeight() + "|", value.getConsSuga() + "|");
 
 				i++;
 			}
 			printWriter.println("----------------------------------------------------------------");
-			double sum = Gift.getTotalCost(MainApp.list);
-			int heft = Gift.getTotalWeight(MainApp.list);
-			double sSuga = Gift.getTotalConSuga(MainApp.list);
+			double sum = Gift.getTotalCost(Initialization.list);
+			int heft = Gift.getTotalWeight(Initialization.list);
+			double sSuga = Gift.getTotalConSuga(Initialization.list);
 			
 			String newSum = String.format("%.2f", sum);
 

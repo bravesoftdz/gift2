@@ -5,7 +5,8 @@ import java.util.Scanner;
 import by.htp_gvozdev.gift.logic.ChoisToSort;
 import by.htp_gvozdev.gift.logic.Constant;
 import by.htp_gvozdev.gift.logic.Gift;
-import by.htp_gvozdev.gift.runner.MainApp;
+import by.htp_gvozdev.gift.logic.Initialization;
+
 
 public class Menu {
 
@@ -70,7 +71,7 @@ public class Menu {
 			ChoisToSort.getSort(Constant.CONST_BY_SORT_SUGAR);
 		} else if (subMenuItem == 4) {
 			ClearConsole.ClearCons();
-			Gift.showGift(MainApp.list);
+			Gift.showGift(Initialization.list);
 			Gift.getGiftTotalOnChange();
 			viewMenu();
 		} else {

@@ -4,14 +4,13 @@ import java.util.ArrayList;
 
 import by.htp_gvozdev.gift.bean.Production;
 import by.htp_gvozdev.gift.logic.operation.Menu;
-import by.htp_gvozdev.gift.runner.MainApp;
 
 public class Gift {
 
 	public static void getGiftTotalOnChange() {
-		double sum = Gift.getTotalCost(MainApp.list);
-		int heft = Gift.getTotalWeight(MainApp.list);
-		double sSuga = Gift.getTotalConSuga(MainApp.list);
+		double sum = Gift.getTotalCost(Initialization.list);
+		int heft = Gift.getTotalWeight(Initialization.list);
+		double sSuga = Gift.getTotalConSuga(Initialization.list);
 
 		System.out.printf("%37s %8s %8s %8s \t \n", "TOTAL" + "|", String.format("%.2f", sum) + "|", heft + "|",
 				String.format("%.2f", sSuga) + "|");
@@ -27,7 +26,7 @@ public class Gift {
 	@SuppressWarnings("unused")
 	public static void getGift() {
 		Gift gift = new Gift();
-		ArrayList<Production> list = MainApp.setGift();
+		ArrayList<Production> list = Initialization.setGift();
 		Gift.showGift(list);
 		double sum = Gift.getTotalCost(list);
 		int heft = Gift.getTotalWeight(list);

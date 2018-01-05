@@ -2,8 +2,7 @@ package by.htp_gvozdev.gift.logic.operation;
 
 import java.util.Scanner;
 
-import by.htp_gvozdev.gift.logic.Gift;
-import by.htp_gvozdev.gift.runner.MainApp;
+import by.htp_gvozdev.gift.logic.*;
 
 public class DeleteCandyByName {
 
@@ -18,14 +17,14 @@ public class DeleteCandyByName {
 		
 		
 		////////???????????????????
-		if (MainApp.list.size() == 0) {
+		if (Initialization.list.size() == 0) {
 			System.out.println("**********Sorry, but the list is empty.**********");
 		} else {
 
-			MainApp.list.remove(indexCandyUser - 1);
+			Initialization.list.remove(indexCandyUser - 1);
 		}
 
-		Gift.showGift(MainApp.list);
+		Gift.showGift(Initialization.list);
 		Gift.getGiftTotalOnChange();
 		Menu.viewMenu();
 	}
